@@ -1,0 +1,32 @@
+.body {
+    height: max-content;
+    //background-color: white;
+    flex-grow: 6;
+    h3,
+    h1 {
+        text-align: center;
+    }
+    .bookContainer {
+        display: grid;
+        justify-items: center;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        margin: clamp(1rem, 1.5rem, 2rem);
+    }
+    button {
+        display: grid;
+        justify-items: center;
+        margin: 2rem auto;
+        width: 20%;
+        padding: 10px;
+        background: #2196F3;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        width: clamp(70px, 150px, 300px);
+        &:hover {
+            background-color: #0b7dda;
+        }
+    }
+}

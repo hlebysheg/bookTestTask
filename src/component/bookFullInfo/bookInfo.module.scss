@@ -1,0 +1,38 @@
+.background {
+    height: max-content;
+    background-color: white;
+    flex-grow: 7;
+    .description {
+        padding-top: 1rem;
+    }
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    h3,
+    h1 {
+        text-align: center;
+    }
+    .imgContainer {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(243, 229, 212);
+        padding: 1rem;
+    }
+    img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+    .info {
+        margin-top: 1rem;
+        margin-left: 1rem;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .category {
+        color: rgb(92, 91, 91);
+    }
+}

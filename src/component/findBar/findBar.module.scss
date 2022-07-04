@@ -1,0 +1,76 @@
+.title {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.findBar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.inputBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .input {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        width: clamp(200px, 500px, 800px);
+        background: #f1f1f1;
+    }
+    .button {
+        width: 20%;
+        padding: 10px;
+        background: #2196F3;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        width: clamp(70px, 150px, 300px);
+        cursor: pointer;
+        &:hover {
+            background-color: #0b7dda;
+        }
+    }
+}
+
+.sortBar {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 2.5rem;
+    label {
+        margin: auto 2px;
+    }
+    .selectBar {
+        display: grid;
+        grid-template-areas: "select";
+        align-items: center;
+        position: relative;
+        select,
+        &::after {
+            grid-area: select;
+        }
+        width: clamp(80px, 150px, 300px);
+        border: 1px solid var(--select-border);
+        border-radius: 0.25em;
+        padding: 0.2em 0.2em;
+        font-size: 1.25rem;
+        cursor: pointer;
+        line-height: 1.1;
+        background-color: #fff;
+        background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+        &:not(.select--multiple)::after {
+            content: "";
+            justify-self: end;
+            width: 0.8em;
+            height: 0.5em;
+            background-color: var(--select-arrow);
+            clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+        }
+    }
+}

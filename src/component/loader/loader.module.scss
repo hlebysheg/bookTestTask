@@ -1,0 +1,31 @@
+anim {
+    display: grid;
+    width: 80px;
+    height: 80px;
+}
+
+.center {
+    display: grid;
+    justify-content: center;
+}
+
+.anim:after {
+    content: " ";
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: rgb(0, 61, 13) transparent rgb(112, 0, 0) transparent;
+    animation: anim 1.2s linear infinite;
+}
+
+@keyframes anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

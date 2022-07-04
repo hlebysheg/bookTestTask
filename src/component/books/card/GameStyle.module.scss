@@ -1,0 +1,81 @@
+$width-card: 190px;
+$height-card: 250px;
+$card-color: white;
+$border-option: 1px solid rgb(87, 85, 85);
+$tag-border: 1px solid silver;
+$tag-border-radius: 20%;
+.card {
+    width: $width-card;
+    height: $height-card;
+    position: relative;
+    perspective: 1000px;
+    // border: 1px solid silver;
+    &:hover {
+        img {
+            transform: rotateY(180deg);
+            //width: 40px;
+        }
+        .textSide {
+            transform: rotateY(360deg);
+        }
+    }
+    // position: absolute;
+    .textSide {
+        overflow: hidden;
+        //margin: 1rem;
+        border: $border-option;
+        border-radius: 10%;
+        width: $width-card;
+        height: $height-card;
+        background-color: $card-color;
+        transform: rotateY(180deg);
+        transition: 1s;
+        position: absolute;
+        backface-visibility: hidden;
+        div {
+            padding-left: 1rem;
+            padding-top: 10px;
+        }
+        .TagContainer {
+            flex-wrap: wrap;
+            display: flex;
+            span {
+                //border: $border-option;
+                padding-right: 1rem;
+            }
+        }
+        .center {
+            padding-bottom: 1rem;
+            text-align: center;
+        }
+    }
+    img {
+        border: $border-option;
+        border-radius: 10%;
+        position: absolute;
+        backface-visibility: hidden;
+        transition: 1s;
+        width: $width-card;
+        height: $height-card;
+    }
+}
+
+.tag {
+    border: $tag-border;
+    border-radius: $tag-border-radius;
+    div {
+        display: inline;
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+    &:hover {
+        transition: 1000ms;
+        background-color: black;
+        a {
+            transition: 1000ms;
+            color: white;
+        }
+    }
+}
